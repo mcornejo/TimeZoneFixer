@@ -1,0 +1,43 @@
+#!/bin/sh
+
+version=$(date +"%Y")
+
+mkdir $version
+wget ftp://ftp.iana.org/tz/tzdata-latest.tar.gz;
+wait
+tar xvf tzdata-latest.tar.gz -C $version;
+wait
+
+mkdir data
+
+for i in $version/africa \
+    $version/antarctica \
+    $version/asia \
+    $version/australasia \
+    $version/etcetera \
+    $version/europe \
+    $version/factory \
+    $version/northamerica \
+	$version/pacificnew \
+    $version/solar87 \
+    $version/solar88 \
+    $version/solar89 \
+    $version/southamerica
+do
+    zic -d data $i
+done
+
+javac ZoneCompactor.java
+
+(
+    cat $version/* | grep '^Link' | awk '{print $1, $2, $3}'
+   (
+        cat $version/* | grep '^Zone' | awk '{print $2}'
+        cat $version/* | grep '^Link' | awk '{print $3}'
+    ) | LC_ALL="C" sort
+) | grep -v Riyadh8 > setup
+
+echo $version >> zoneinfo.version
+java ZoneCompactor setup data
+
+
