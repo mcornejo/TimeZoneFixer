@@ -25,3 +25,9 @@ Este script crea tres archivos:
 - zoneinfo.version
 
 Copia/Reemplaza esos archivos en tu android en la carpeta /system/usr/share/zoneinfo. Para realizarlo, debes usar un programa que te permita explorar tus archivos, como por ejemplo el ES File Explorer en modo root y montando la partición / en modo escritura.
+
+Reinicia tu Android.
+
+
+
+-- mcornejo
