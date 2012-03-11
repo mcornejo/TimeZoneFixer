@@ -40,4 +40,8 @@ javac ZoneCompactor.java
 echo $version >> zoneinfo.version
 java ZoneCompactor setup data
 
+echo "==================="
+echo "finished - Murdix"
+echo "==================="
+
 
