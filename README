@@ -17,7 +17,7 @@ Reboot your device.
 
 Esta aplicación corrige el problema de la zona horaria en los países que los gobiernos modifican el cambio de hora.
 
-Para ejecutarlo, escribe `.sh/generate' en tu consola. Este script descarga la última versión del timezone data, lo descomprime y compila automáticamente para generar los binarios necesarios para la actualización de tu android.
+Para ejecutarlo, escribe `sh ./generate' en tu consola. Este script descarga la última versión del timezone data, lo descomprime y compila automáticamente para generar los binarios necesarios para la actualización de tu android.
 
 Este script crea tres archivos:
 - zoneinfo.dat
