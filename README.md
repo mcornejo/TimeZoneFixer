@@ -1,9 +1,13 @@
-Time Zone Fixer
+# Time Zone Fixer
 
-This application fix the timezone problems in the countries that the government changes the policy of daylight saving time (DST).
+This small app fixes the timezone problems in the countries that the government changes the policy of daylight saving time (DST).
 
-In order to make it work, run sh ./generator. This script will automatically download the lastest timezone data, decompress it and will compile the files that you need put in your android-based device.
-
+## Usage
+In order to make it work, just run in your terminal:
+```bash
+$ sh ./generator
+```
+This script will automatically download the latest timezone data, decompress it and will compile the files that you need upload to your Android-based device.
 This script will generate three files:
 - zoneinfo.dat
 - zoneinfo.idx
@@ -14,10 +18,15 @@ Copy/Replace these three files into your device (in the /system/usr/share/zonein
 Reboot your device.
 
 
+## Uso
 
 Esta aplicación corrige el problema de la zona horaria en los países que los gobiernos modifican el cambio de hora.
 
-Para ejecutarlo, escribe `sh ./generate' en tu consola. Este script descarga la última versión del timezone data, lo descomprime y compila automáticamente para generar los binarios necesarios para la actualización de tu android.
+Para ejecutarlo, escribe lo siguiente en tu consola:
+```bash
+$ sh ./generator
+```
+Este script descarga la última versión del timezone data, lo descomprime y compila automáticamente para generar los binarios necesarios para la actualización de tu android.
 
 Este script crea tres archivos:
 - zoneinfo.dat
